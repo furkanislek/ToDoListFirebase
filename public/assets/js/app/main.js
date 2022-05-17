@@ -1,23 +1,30 @@
 $(document).ready(function(){
 
-    var config = {
-        apiKey: "AIzaSyCPhE4ibN8RXy4MrfXnXUQeG5PUM0zqNfI",
-        authDomain: "fir-todo-list-tutorial.firebaseapp.com",
-        databaseURL: "https://fir-todo-list-tutorial.firebaseio.com",
-        projectId: "fir-todo-list-tutorial",
-        storageBucket: "fir-todo-list-tutorial.appspot.com",
-        messagingSenderId: "535305407723"
-    };
-    firebase.initializeApp(config);
+    const config = {
+        apiKey: "AIzaSyAp6PwUaBGTKnbAOuaA9Qe74ZJooYVmk4k",
+        authDomain: "myperfecttodolist45.firebaseapp.com",
+        projectId: "myperfecttodolist45",
+        storageBucket: "myperfecttodolist45.appspot.com",
+        messagingSenderId: "304111299648",
+        appId: "1:304111299648:web:d7571a272689da158bc3a5",
+        measurementId: "G-LTJ9G6L155",
+        databaseURL: "https://myperfecttodolist45-default-rtdb.firebaseio.com/"
+      };
+
+      if (!firebase.apps.length) {
+        firebase.initializeApp(config);
+     }else {
+        firebase.app();
+     }
 
     var current_user = "";
 
     firebase.auth().onAuthStateChanged(function(user){
 
-        if(user){
-
-            current_user = user.uid;
-
+        if (user) {
+          
+          current_user = user.uid;
+            
             $(".user-text").text(user.email);
 
             $("#logout").click(function(){
@@ -57,7 +64,7 @@ $(document).ready(function(){
 
                     var description_elem = "<td>" + item.val().description + "</td>";
                     var completed_elem = "<td class='text-center'><input data-key='" + item.key + "' type='checkbox' class='switchery-plugin' " + completed + "/></td>";
-                    var removeBtn_elem = "<td class='text-center'><button data-key='" + item.key + "' class='btn btn-danger btn-block removeBtn'>Sil</button></td>";
+                    var removeBtn_elem = "<td class='text-center'><button data-key='" + item.key + "' class='btn btn-danger btn-block removeBtn'>Delete</button></td>";
 
                     $parent.append("<tr>" + description_elem + completed_elem + removeBtn_elem + "</tr>");
 
@@ -85,17 +92,13 @@ $(document).ready(function(){
                 var $key = $(this).data("key");
 
                 firebase.database().ref("users/" + current_user).child("todos").child($key).child("completed").set($completed);
-
-
-
-
-
-
-
+            
             })
-
-
-        }
+        } 
+        
+        else {
+            window.location.href = "login.html";
+          }
 
     })
 

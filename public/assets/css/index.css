@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.4;
+	margin: 0;
+}
+
+ul {
+  margin: 10px 20px;
+  padding: 10px;
+  list-style: none;
+}
+
+a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.todocontainer{
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px,rgba(61, 61, 102, 0.096) 0px 10px 30px -40px inset;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+body .bg-image{
+    position: fixed;
+    background-image: url(https://cdn.pixabay.com/photo/2018/04/28/22/03/tree-3358468_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1) ;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.8;
+    z-index: -0.5;
+}
+
+
+.text-todo {
+    position: relative;
+    width: max-content;
+    margin-left: 20rem;
+    font-size: 3rem;
+    color: #252839;
+    -webkit-text-stroke: 0.1vw #383d52;
+    text-transform: uppercase;
+}
+
+
+.user-text{
+    width: max-content;
+}
+
+
+
+ @media (max-width:1200px){
+    html{
+        font-size: 11px;
+    }
+
+    .text-todo h3{
+        margin-left: 2rem;
+    }
+} 
+
+ @media (max-width:500px){
+    html{
+        font-size: 8.5px;
+    }
+
+  
+} 
