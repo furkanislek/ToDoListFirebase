@@ -8,7 +8,7 @@ $(document).ready(function(){
         messagingSenderId: "**********",
         appId: "******************",
         measurementId: "***********",
-        databaseURL: "https://myperfecttodolist45-default-rtdb.firebaseio.com/"
+        databaseURL: "********************"
     };
     
     if (!firebase.apps.length) {
