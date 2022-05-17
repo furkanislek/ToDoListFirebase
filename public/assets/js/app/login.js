@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     var config = {
-        apiKey: "AIzaSyAp6PwUaBGTKnbAOuaA9Qe74ZJooYVmk4k",
+        apiKey: "**************",
         authDomain: "myperfecttodolist45.firebaseapp.com",
         projectId: "myperfecttodolist45",
         storageBucket: "myperfecttodolist45.appspot.com",
-        messagingSenderId: "304111299648",
-        appId: "1:304111299648:web:d7571a272689da158bc3a5",
-        measurementId: "G-LTJ9G6L155",
+        messagingSenderId: "**********",
+        appId: "******************",
+        measurementId: "***********",
         databaseURL: "https://myperfecttodolist45-default-rtdb.firebaseio.com/"
     };
     
